@@ -5,6 +5,12 @@
     font-family: Arial, sans-serif;
 }
 
+h1 {
+    font-size: 100px;
+    text-align: center;
+    line-height: 200px;
+}
+
 .main-menu {
     position: relative;
     background: url(./assets/background.png);
