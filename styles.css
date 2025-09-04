@@ -6,6 +6,7 @@
 }
 
 .main-menu {
+    position: relative;
     background: url(./assets/background.png);
     background-repeat: no-repeat;
     background-size: cover;
@@ -14,39 +15,52 @@
 }
 
 .main-menu-buttons { /*scope of buttons*/
+    position: absolute;
+    padding: 50px 100px;
+    left: 50%; 
+    top: 50%;
+    transform: translate(-50%, -50%); 
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    backdrop-filter: blur(10px);
-    padding: 20px 100px;
-    margin: 0px calc(100vh - 50%);
+    backdrop-filter: blur(10px) brightness(0.93);
     border-radius: 20px;
-    border: 5px solid red;
+    border: 5px solid url(./assets/border.png);
 }
 
 .main-menu button {
-    margin: 10px;
+    margin: 0 10px;
     padding: 15px 30px;
-    font-size: 18px;
+    font-size: 45px;
+    letter-spacing: 3.5px;
     text-align: center;
     cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 0px;
+    border: none;
     background-color: transparent;
-    font-size: 45px;
     color: aliceblue;
     text-shadow:
-            -1px -1px 0 black,
-            1px -1px 0 black,
-            -1px 1px 0 black,
-            1px 1px 0 black;
+            -2px -2px 0 black,
+            2px -2px 0 black,
+            -2px 2px 0 black,
+            2px 2px 0 black,
+            0px -2px 0 black,
+            2px 0px 0 black,
+            0px 2px 0 black,
+            -2px 0px 0 black;
 }
 
 .main-menu button:hover {
     transform: scale(1.35);
+    color: yellow;
+}
+
+.main-menu button:active {
+    transform: scale(1.25);
+    color: orange;
 }
 
 .hide {
@@ -76,3 +90,15 @@
 }
 
 
+/*Media Quaries*/
+@media (max-width: 1200px) {
+    .main-menu button {
+        font-size: 35px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .main-menu button {
+        font-size: 30px;
+    }
+}
