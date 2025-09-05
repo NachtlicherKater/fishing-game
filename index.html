@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Непредсказуемая Рыбалка</title>
     <link rel="stylesheet" href="./styles.css">
-    <title>Fishing Game</title>
-
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Forum&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Forum&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
 </head>
 <body>
     <!-- Main Menu -->
@@ -16,21 +16,39 @@
         <h1>Непредсказуемая Рыбалка</h1>
         <div class="main-menu-buttons">
             <button class="start-button">Начать игру</button>
+            <button class="about-game-button">Как играть?</button>
             <button class="settings-button">Настройки</button>
             <button class="leaderboards-button">Рекорды</button>
-            <button class="exit-button">Выход</button>
         </div>
     </div>
     <!-- Game Window -->
     <div class="game hide">
         <div class="map-viewport">
-
+            <img src="./assets/map/map.png" alt="Map" class="map-image">
         </div>
         <div class="person-viewport">
 
         </div>
         <div class="settings-viewport">
         
+        </div>
+    </div>
+    <!-- About Game -->
+    <div class="about-game hide">
+        <button class="close-about-game"></button>
+        <h2>Как играть?</h2>
+        <div class="about-game-container">
+            <p>Добро пожаловать в игру "Непредсказуемая Рыбалка"! В этой игре вам предстоит исследовать разнообразные водоемы, ловить рыбу и улучшать свои навыки рыбалки. Вот несколько советов, которые помогут вам начать:</p>
+            <ul>
+                <li><strong>Выбор места рыбалки:</strong> Исследуйте разные водоемы, чтобы найти лучшие места для ловли рыбы. Некоторые виды рыбы предпочитают определенные условия.</li>
+                <li><strong>Использование снастей:</strong> Экспериментируйте с различными удочками, приманками и наживками, чтобы увеличить свои шансы на успешную рыбалку.</li>
+                <li><strong>Навыки рыбалки:</strong> Развивайте свои навыки, чтобы улучшить точность заброса и скорость вываживания рыбы.</li>
+                <li><strong>Соревнования:</strong> Участвуйте в соревнованиях по рыбалке, чтобы проверить свои навыки против других игроков и заработать награды.</li>
+                <li><strong>Исследование мира:</strong> Путешествуйте по различным локациям, открывайте новые виды рыбы и наслаждайтесь красивыми пейзажами.</li>
+            </ul>
+            <p>Помните, что рыбалка требует терпения и практики. Удачи вам в ваших приключениях на воде!</p>
+
+            этот текст будет меняться, это просто заглушка (placeholder) 
         </div>
     </div>
     <!-- Leaderboards -->
