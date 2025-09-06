@@ -87,15 +87,24 @@ h1 {
 }
 
 .map-viewport {
+    position: relative;
     grid-area: 1 / 1 / 3 / 2;
     border: 2px solid black;
     height: 100vh;
     width: 100%;
 }
 
-.map-viewport img {
+.map-image {
     width: 100%;
     height: calc(100vh - 7px);
+}
+
+.map-church {
+    position: absolute;
+    top: 2%;
+    left: 5%;
+    width: 14%;
+    z-index: 1;
 }
 
 .person-viewport {
