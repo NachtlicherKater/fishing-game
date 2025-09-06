@@ -169,9 +169,9 @@ h2 {
 /*Leaderboards*/
 .leaderboards {
     position: absolute;
-    left: 50%; 
+    left: 50%;
     top: 50%;
-    transform: translate(-50%, -50%); 
+    transform: translate(-50%, -50%);
     width: 80%;
     height: 80%;
     background-color: rgba(255, 255, 255, 0.93);
@@ -196,22 +196,182 @@ h2 {
 }
 
 .close-leaderboards:active {
-   background: url(./assets/icons/back-colored.png); 
-   background-clip: border-box;
-   background-size: contain;
+    background: url(./assets/icons/back-colored.png);
+    background-clip: border-box;
+    background-size: contain;
+}
+
+/*Settings*/
+
+.settings {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 60%;
+    height: 60%;
+    background-color: rgba(255, 255, 255, 0.93);
+    border-radius: 25px;
+    padding: 10px;
+}
+
+.close-settings {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    border: none;
+    background: url(./assets/icons/back.png);
+    background-size: contain;
+    cursor: pointer;
+}
+
+.close-settings:hover {
+    transform: scale(1.2);
+}
+
+.close-settings:active {
+    background: url(./assets/icons/back-colored.png);
+    background-clip: border-box;
+    background-size: contain;
+}
+
+.settings.hide {
+    display: none;
+}
+
+.settings-item {
+     display: flex;             
+  flex-direction: column;   
+  align-items: center; 
+    margin: 15px 0;
+    
+          
+}
+
+/* Подписи */
+.settings-item label {
+    display: block;
+    font-size: 16px;
+    margin-bottom: 5px;
+    color: #222;
+    text-align: center;
+    
+}
+
+.settings-item input[type="text"] {
+    width: 40%;
+    padding: 8px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    text-align: center;
+}
+
+.settings-item input[type="text"]::placeholder {
+  text-align: center;        /* placeholder по центру */
+  color: #888;
+  opacity: 1;
+}
+
+/* Ползунок громкости */
+.settings-item input[type="range"] {
+    width: 40%;
+}
+
+/* Селект */
+.settings-item select {
+    width: 20%;
+    padding: 6px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    text-align: center;
+}
+
+/*принятие*/
+.accept {
+    position: absolute;
+    bottom: 30px;
+    right: 48%;
+    width: 60px;
+    height: 60px;
+    border: none;
+    background: url(./assets/icons/back.png);
+    background-size: contain;
+    cursor: pointer;
+}
+
+.accept:hover {
+    transform: scale(1.2);
+}
+
+.accept:active {
+    background: url(./assets/icons/back-colored.png);
+    background-clip: border-box;
+    background-size: contain;
+}
+
+/*alert window*/
+
+.game-alert {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 40%;
+    height: 15%;
+    background-color: rgba(255, 255, 255, 0.93);
+    border-radius: 25px;
+    padding: 10px;
+    font-size: 38px;
+    text-align: center;
+    text-shadow: 2px 2px 5px #000;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.game-alert.show {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+    pointer-events: auto;
+}
+
+.game-alert.hide {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.8);
+    pointer-events: none;
 }
 
 
 
+
 /*Show/Hide Animations*/
-.hide { display: none; }
+.hide {
+    display: none;
+}
 
-.show { display: block; }
+.show {
+    display: block;
+}
 
-.show-game { animation: showGame 0.5s forwards; }
+.show-game {
+    animation: showGame 0.5s forwards;
+}
 
 @keyframes showGame {
-    from { transform: scale(0); display: none; } to { transform: scale(1); display: grid; }
+    from {
+        transform: scale(0);
+        display: none;
+    }
+
+    to {
+        transform: scale(1);
+        display: grid;
+    }
 }
 
 
@@ -222,7 +382,7 @@ h2 {
     }
 
     h1 {
-        font-size: 75px; 
+        font-size: 75px;
     }
 }
 
