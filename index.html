@@ -31,7 +31,9 @@
 
         </div>
         <div class="settings-viewport">
-        
+           <audio controls>
+                <source src="./assets/sounds/prud.mp3" type="audio/mpeg">
+            </audio>
         </div>
     </div>
     <!-- About Game -->
@@ -53,14 +55,56 @@
         </div>
     </div>
     <!-- Leaderboards -->
-    <div class="leaderboards hide">
+    <div class="leaderboards hide" >
         <button class="close-leaderboards"></button>
         <h2>Рекорды</h2>
     </div>
-    <!-- Settings -->
-    <div class="settings hide">
 
-    </div>
+
+    <!-- Settings -->
+    <div class="settings hide" id="settings">
+        <button class="close-settings"></button>
+        <h2>Настройки</h2>
+        
+   <div class="settings-item">
+    <label for="nickname">Ваш никнейм:</label>
+    <input type="text" id="nickname" name="nickname" placeholder="Введите ник">
+  </div>
+
+  <!-- Громкость -->
+  <div class="settings-item">
+    <label for="volume">Общая громкость:</label>
+    <input type="range" id="volume" name="volume" min="0" max="100" value="100">
+
+    <label for="volume">Громкость эффектов:</label>
+    <input type="range" id="volume" name="volume" min="0" max="100" value="100">
+
+    <label for="volume">Звук окружения:</label>
+    <input type="range" id="volume" name="volume" min="0" max="100" value="100">
+
+    <label for="volume">Звук уведомлений:</label>
+    <input type="range" id="volume" name="volume" min="0" max="100" value="100">
+
+    
+  </div>
+
+  <!-- Язык -->
+  <div class="settings-item">
+    <label for="language">Язык:</label>
+    <select id="language" name="language">
+      <option value="ru">Русский</option>
+      <option value="en">English</option>
+    </select>
+  </div>
+
+  <button class="accept"></button>
+</div>
+
+
+
+<div id="game-alert" class="game-alert hide">
+
+</div>
     <!-- Scripts -->
     <script src="./scripts/main-menu.js"></script>
 </body>

@@ -3,9 +3,13 @@ const startButton = document.querySelector('.start-button');
 const aboutButton = document.querySelector('.about-game-button');
 const aboutCloseButton = document.querySelector('.close-about-game');
 const settingsButton = document.querySelector('.settings-button');
+const settingsCloseButton = document.querySelector('.close-settings');
 const leaderboardButton = document.querySelector('.leaderboards-button');
 const leaderboardCloseButton = document.querySelector('.close-leaderboards');
 const exitButton = document.querySelector('.exit-button');
+const acceptButton = document.querySelector('.accept');
+const settings = document.getElementById('settings');
+
 // Windows
 const mainWindow = document.querySelector('.main-menu');
 const gameWindow = document.querySelector('.game');
@@ -42,3 +46,35 @@ leaderboardCloseButton.addEventListener('click', () => {
     leaderboardsWindow.classList.remove('show');
     leaderboardsWindow.classList.add('hide');
 });
+
+settingsButton.addEventListener('click', () => {
+    settingsWindow.classList.remove('hide');
+     settingsWindow.classList.add('show');
+});
+
+settingsCloseButton.addEventListener('click', () => {
+   settingsWindow.classList.remove('show');
+     settingsWindow.classList.add('hide');
+});
+
+
+// здесь функция для всплывающего окна по кнопке принять 
+
+function showGameAlert(message) {
+    const alertBox = document.getElementById('game-alert');
+    alertBox.textContent = message;      
+    alertBox.classList.remove('hide');   
+    alertBox.classList.add('show');      
+
+    
+    setTimeout(() => {
+        alertBox.classList.remove('show');
+        alertBox.classList.add('hide');
+    }, 3000);
+}
+
+acceptButton.addEventListener('click', () => {
+    showGameAlert('Леска распутана, забрасывай!'); 
+    settings.classList.add('hide');     
+});
+
