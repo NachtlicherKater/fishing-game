@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Непредсказуемая Рыбалка</title>
+    <link rel="stylesheet" href="./styles.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Forum&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Main Menu -->
+    <div class="main-menu show">
+        <h1>Непредсказуемая Рыбалка</h1>
+        <div class="main-menu-buttons">
+            <button class="start-button">Начать игру</button>
+            <button class="about-game-button">Как играть?</button>
+            <button class="settings-button">Настройки</button>
+            <button class="leaderboards-button">Рекорды</button>
+        </div>
+    </div>
+
+
+    <!-- Game Window -->
+    <div class="game hide">
+        <div class="map-viewport">
+            <img src="./assets/map/map.png" alt="Map" class="map-image">
+            <canvas class="lake"></canvas>
+        </div>
+        <div class="person-viewport">
+
+        </div>
+        <div class="settings-viewport">
+           <audio controls>
+                <source src="./assets/sounds/prud.mp3" type="audio/mpeg">
+            </audio>
+        </div>
+    </div>
+
+
+    <!-- About Game -->
+    <div class="about-game hide">
+        <button class="close-about-game"></button>
+        <h2>Как играть?</h2>
+        <div class="about-game-container">
+            <p>Добро пожаловать в игру "Непредсказуемая Рыбалка"! В этой игре вам предстоит исследовать разнообразные водоемы, ловить рыбу и улучшать свои навыки рыбалки. Вот несколько советов, которые помогут вам начать:</p>
+            <ul>
+                <li><strong>Выбор места рыбалки:</strong> Исследуйте разные водоемы, чтобы найти лучшие места для ловли рыбы. Некоторые виды рыбы предпочитают определенные условия.</li>
+                <li><strong>Использование снастей:</strong> Экспериментируйте с различными удочками, приманками и наживками, чтобы увеличить свои шансы на успешную рыбалку.</li>
+                <li><strong>Навыки рыбалки:</strong> Развивайте свои навыки, чтобы улучшить точность заброса и скорость вываживания рыбы.</li>
+                <li><strong>Соревнования:</strong> Участвуйте в соревнованиях по рыбалке, чтобы проверить свои навыки против других игроков и заработать награды.</li>
+                <li><strong>Исследование мира:</strong> Путешествуйте по различным локациям, открывайте новые виды рыбы и наслаждайтесь красивыми пейзажами.</li>
+            </ul>
+            <p>Помните, что рыбалка требует терпения и практики. Удачи вам в ваших приключениях на воде!</p>
+
+            этот текст будет меняться, это просто заглушка (placeholder) 
+        </div>
+    </div>
+
+
+    <!-- Leaderboards -->
+    <div class="leaderboards hide" >
+        <button class="close-leaderboards"></button>
+        <h2>Рекорды</h2>
+    </div>
+
+
+    <!-- Settings -->
+    <div class="settings hide">
+        <button class="close-settings"></button>
+        <h2>Настройки</h2>
+        <div class="settings-item">
+            <label for="nickname">Ваш никнейм:</label>
+            <input type="text" id="nickname" name="nickname" placeholder="Введите ник">
+        </div>
+        <div class="settings-item">
+            <label for="volume">Общая громкость:</label>
+            <input type="range" id="volume" name="volume" min="0" max="100" value="100">
+
+            <label for="volume">Громкость эффектов:</label>
+            <input type="range" id="volume" name="volume" min="0" max="100" value="100">
+
+            <label for="volume">Звук окружения:</label>
+            <input type="range" id="volume" name="volume" min="0" max="100" value="100">
+
+            <label for="volume">Звук уведомлений:</label>
+            <input type="range" id="volume" name="volume" min="0" max="100" value="100"> 
+        </div>
+        <div class="settings-item">
+            <label for="language">Язык:</label>
+            <select id="language" name="language">
+                <option value="ru">Русский</option>
+                <option value="en">English</option>
+            </select>
+        </div>
+        <button class="accept"></button>
+        <div class="game-alert hide"></div>
+    </div>
+
+
+    <!-- Scripts -->
+    <script src="./scripts/main-menu.js"></script>
+    <script src="./scripts/map-zones.js"></script>
+</body>
+</html>
